@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Document</title>
+    <link rel="stylesheet" href="../public/css/left.css">
+    <link
+    rel="stylesheet"
+    href="../public/css/animate.min.css"
+  />
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+  <!-- first Screen -->
+  <!-- logo -->
+  <img id="logo"style="display: none;" src="../public/videos/Craftech360_Logo White (1) (1).png" alt="">
+    <video
+    id="img" 
+    src="../public/videos/intro.mp4"
+    preload="auto" 
+    autoplay 
+    loop 
+    muted
+    >
+    </video>
+    <a type="button" id="back" onclick="goBack()"  style="display: none;">&laquo;</a>
+  <!-- default bg video -->
+  <video
+  style="display: none;"
+  id="show"
+  type="video/mp4"
+  width="100%"
+  loop
+  autoplay 
+  muted
+  >
+  </video>
+  <video
+  style="display: none;"
+  id="about"
+  type="video/mp4"
+  width="100%"
+  loop
+  autoplay 
+  muted
+  >
+ 
+  </video>
+  <video
+  id="bg"
+  type="video/mp4"
+  src="/public/videos/icons seprate 08.mp4"
+  width="100%"
+  alt=""
+  preload="auto" 
+  autoplay 
+  loop
+  muted>
+  </video>
+  <!-- default button  -->
+  <div id="leftDiv">
+        <video 
+    
+        id="one"
+        type="video/webm"
+        src="/public/videos/Element_07.webm"
+        width="200px"
+        alt=""
+        onclick="goToShow()"
+        preload="auto" 
+        autoplay 
+        loop 
+        muted>
+        </video>
+        <h1 id="a" class="text">SHOWREEL</h1>
+        <video 
+    
+        id="two"
+        type="video/webm"
+        src="/public/videos/Element_07.webm"
+        width="200px"
+        alt=""
+        onclick="goToAbout()"
+        preload="auto" 
+        autoplay 
+        loop 
+        muted>
+        </video>
+        <h1 id="b" class="text">ABOUT US</h1>
+        <video 
+    
+        id="three"
+        type="video/webm"
+        src="/public/videos/Element_07.webm"
+        width="200px"
+        alt=""
+        onclick="goTo()"
+        preload="auto" 
+        autoplay 
+        loop 
+        muted>
+        </video>
+        <h1 id="c" class="text">PRODUCTS</h1>
+        <video 
+    
+        id="four"
+        type="video/webm"
+        src="/public/videos/Element_07.webm"
+        width="200px"
+        alt=""
+        onclick="goToFuture()"
+        preload="auto" 
+        autoplay 
+        loop 
+        muted>
+        </video>
+        <h1 id="d" class="text">FUTURE <br> PRODUCTS</h1>
+  </div>
+  
+
+  <!-- second Screen  -->
+  <div style="width: 88%;float: left;top: 0%;position: absolute; left: 0%;">
+    <iframe style="display: none;" src="" id="video" allow="autoplay" allowfullscreen></iframe>
+  </div>
+  <!-- PRODUCTS -->
+  <section id="main" style="display:none;" >
+    <div class="animate__animated animate__backInDown " id="1"  onclick="doSomeThing('1')">
+      <video 
+  
+      id="sub1"
+        type="video/webm"
+        src="/public/videos/Element_07.webm"
+        width="150px"
+        alt=""
+        onclick="goTo()"
+        preload="auto" 
+        autoplay 
+        muted>
+      </video>
+    </div>
+    <span style="color:aliceblue;">Volmetric Display</span>
+    <div class="animate__animated animate__backInDown" id="2" onclick="doSomeThing('2')">
+      <video 
+        id="sub2"
+        type="video/webm"
+        src="/public/videos/Element_07.webm"
+        width="150px"
+        alt=""
+        preload="auto" 
+        autoplay 
+        muted>
+        </video>
+    </div>
+    <span style="color:aliceblue;">Interactive Wall</span>
+    <div class="animate__animated animate__backInDown" id="3" onclick="doSomeThing('3')">
+      <video 
+        id="sub3"
+        type="video/webm"
+        src="/public/videos/Element_07.webm"
+        width="150px"
+        alt=""
+        preload="auto" 
+        autoplay 
+        muted>
+        </video>
+    </div>
+    <span style="color:aliceblue;">Registration</span>
+    <div class="animate__animated animate__backInDown" id="4" onclick="doSomeThing('4')">
+      <video 
+        id="sub4"
+        type="video/webm"
+        src="/public/videos/Element_07.webm"
+        width="150px"
+        alt=""
+        preload="auto" 
+        autoplay 
+        muted>
+        </video>
+    </div>
+    <span style="color:aliceblue;">Tweet Cafe</span>
+    <div class="animate__animated animate__backInDown" id="5" onclick="doSomeThing('5')">
+      <video 
+        id="sub5"
+        type="video/webm"
+        src="/public/videos/Element_07.webm"
+        width="150px"
+        alt=""
+        preload="auto" 
+        autoplay 
+        muted>
+        </video>
+    </div>
+    <span style="color:aliceblue;">Scanny</span>
+    <div class="animate__animated animate__backInDown" id="6" onclick="doSomeThing('6')">
+      <video 
+        id="sub6"
+        type="video/webm"
+        src="/public/videos/Element_07.webm"
+        width="150px"
+        alt=""
+        preload="auto" 
+        autoplay 
+        muted>
+        </video>
+    </div>
+    <span style="color:aliceblue;font-size: 12px;">Floor Interactive Display</span>
+  </section>
+
+
+<script src="/public/js/left.js"></script>
+</body>
+</html>

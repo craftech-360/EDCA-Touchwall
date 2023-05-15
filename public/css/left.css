@@ -1,0 +1,175 @@
+:root {
+    --glow-color: hsl(50.35, 100%, 50%);
+    touch-action: pan-x pan-y;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    position: fixed;
+    background-color: black;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  #bgVdo {
+    width: 100%;
+    height: 100%;
+    object-fit:contain;
+  }
+  
+  #one{
+    position: absolute;
+    right: 21.5%;
+    top: 16%;
+    z-index: 300;
+  }
+  #two{
+    position: absolute;
+    right: 13.5%;
+    top:31%;
+    z-index: 300;
+  }
+  #three{
+    position: absolute;
+    right: 240px;
+    top:507px;
+    z-index: 300;
+  }
+  #four{
+    position: absolute;
+    right: 268px;
+    top:710px;
+    z-index: 300;
+  }
+  #bg{
+    position: absolute;
+    z-index: 200;
+    width: 100%;
+  }
+
+  #video{
+    position: relative;
+    z-index: 100;
+    box-shadow: 0 0 50px hsl(50.35, 100%, 50%);
+    width: 80%;
+    height: 80vh;
+    border: none;
+  }
+  .button:active {
+    margin-left:50px;
+  }
+  
+  #main{
+    /* padding-top: 250px; */
+    width: 10%;
+    position: absolute;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+
+  
+  #glowing-btn {
+    margin: 16px 0 16px 0;
+    position: relative;
+    color: var(--glow-color);
+    cursor: pointer;
+    border: 5px solid var(--glow-color);
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    background: none;
+    font-size: 1em;
+    font-weight: bold;
+    /* letter-spacing: 0.15em; */
+    -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+      0px 0px 0.5em 0px var(--glow-color);
+    -moz-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+      0px 0px 0.5em 0px var(--glow-color);
+    animation: border-flicker 4s linear infinite;
+    /* box-shadow: 0 0 10px 0 yellow inset, 0 0 10px 4px yellow; */
+    text-shadow: 0 0 20px yellow;
+    /* text-shadow: 1px 3px 1px red; */
+  }
+  #img{
+    width: 600px;
+    position: absolute;
+    top: 0;
+    z-index: 400;
+    /* left: 30%; */
+  }
+  a{
+    color: #ccc;
+    text-decoration: none;
+    font-size: 130px;
+    position: absolute;
+    bottom: 0;
+    z-index: 2000;
+    cursor: pointer;
+    margin-left: 20px;
+  }
+
+  #logo{
+    margin: 50px;
+    width: 200px;
+    position: absolute;
+    z-index: 3000;
+  }
+
+  .text {
+    z-index: 300;
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 2em;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 1px 1px 1px #f0f409,
+        1px 2px 1px #f0f409,
+        1px 3px 1px #f0f409,
+        1px 4px 1px #f0f409,
+        1px 5px 1px #f0f409,
+        1px 6px 1px #f0f409,
+        1px 7px 1px #f0f409,
+        1px 8px 1px #f0f409,
+        1px 9px 1px #f0f409,
+        1px 10px 1px #f0f409,
+}
+
+#a{
+  top: 19%;
+  right: 13%;
+  color: #feb80a;
+}
+#b{
+  top: 34%;
+  right: 110px;
+  color: #feb80a;
+}
+#c{
+  top: 53%;
+  right: 75px;
+  color: #feb80a;
+}
+#d{
+  top: 69%;
+  right: 100px;
+  color: #feb80a;
+}
+span{
+  align-self: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  
+}

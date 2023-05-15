@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    html,
+    body{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+    }
+    main
+    {
+        width: 80%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    #container > div{
+        width: 550px;
+        height: 350px;
+        margin: 80px;
+        /* padding: 50px; */
+        /* border: 2px solid aliceblue; */
+    }
+    iframe{
+    width: 100%;
+    height: 100%;
+    border: none;
+    box-shadow: 0 0 50px hsl(50.35, 100%, 50%);
+    /* object-fit: contain; */
+    }
+    a{
+    color: #ccc;
+    text-decoration: none;
+    font-size: 160px;
+    position: absolute;
+    bottom: 0;
+    z-index: 2000;
+    cursor: pointer;
+    margin: 25px;
+    left: 0;
+  }
+  #sub-main{
+    /* padding-top: 250px; */
+    width: 100%;
+    position: absolute;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #one {
+    position: absolute;
+    bottom: 0;
+    left: 32%;
+  }
+  #two {
+    position: absolute;
+    bottom: 0;
+    left: 47%;
+  }
+  #three {
+    position: absolute;
+    bottom: 0;
+    left: 63%;
+  }
+  #logo{
+    top: 0;
+    left: 0;
+    margin: 50px;
+    width: 200px;
+    position: absolute;
+    z-index: 3000;
+  }
+
+
+</style>
+<body>
+    
+  <img id="logo" src="../public/videos/Craftech360_Logo White (1) (1).png" alt="">
+    <main id="main"  >
+        <div id="container">
+            <div>
+              <iframe  src="https://www.youtube.com/embed/BCxlok4ervI"></iframe>
+            </div>
+            <div>
+              <iframe  src="https://www.youtube.com/embed/vONVk8tFvKk"></iframe>
+            </div>
+            <div>
+              <iframe  src="https://www.youtube.com/embed/-xWGghYacFg"></iframe>
+            </div>
+            <div>
+              <iframe  src="https://www.youtube.com/embed/bBx1ZVWZ-OY"></iframe>
+            </div>
+        </div>
+    </main>
+    <video
+    muted
+    autoplay
+    loop="true"
+    width="100%"
+    height="100%"
+    id="video"
+    style="display: none;">
+    </video>
+    <a type="button" id="backmain" onclick="backMain()"  >&laquo;</a>
+    <a type="button" id="backsub" onclick="backSub()"style="display: none;"  >&laquo;</a>
+    <a type="button" id="backfor" onclick="backFor()" style="display: none;" >&laquo;</a>
+    <script>
+        let video = document.getElementById("video");
+        let main = document.getElementById("main");
+        let backmain = document.getElementById("backmain");
+        let backfor = document.getElementById("backfor");
+        let submain = document.getElementById("sub-main");
+
+        let one = "../public/products/2/1.mp4"
+        let two = "../public/products/2/2.mp4"
+        let three = "../public/products/2/3.mp4"
+        let four = "../public/products/2/4.mp4"
+        
+        function playSomeThing() {
+          video.muted = true
+            main.style.display = "flex"
+            submain.style.display = "none"
+            backmain.style.display = "none"
+            backsub.style.display = "block"
+        }
+        function doSomething(e) {
+          
+            backmain.style.display = "none"
+            main.style.display = "none"
+            backmain.style.display = "none"
+            backfor.style.display = "block"
+            video.style.display = "block"
+            if (e === "1") {
+              console.log(e);
+              video.className = "animate__animated animate__bounceInLeft"
+              video.src = one;
+              video.muted = false
+            }
+            if (e === "2") {
+              console.log(e);
+              video.className = "animate__animated animate__bounceInLeft"
+              video.src = two;
+              video.muted = false
+            }
+            if (e === "3") {
+              console.log(e);
+              video.className = "animate__animated animate__bounceInLeft"
+              video.src = three;
+              video.muted = false
+            }
+            if (e === "4") {
+              console.log(e);
+              video.className = "animate__animated animate__bounceInLeft"
+              video.src = four;
+              video.muted = false
+            }
+        }
+        function backSub() {
+          video.muted = true
+            submain.style.display = "flex"
+            backmain.style.display = "block"
+            backsub.style.display = "none"
+            main.style.display = "none"
+        }
+        function backMain() {
+            location.href = '/one'
+        }
+        function backFor() {
+          video.muted = true
+            main.style.display = "flex"
+            backmain.style.display = "block"
+            backfor.style.display = "none"
+            video.style.display = "none"
+        }
+    </script>
+</body>
+</html>
