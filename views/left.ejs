@@ -73,9 +73,10 @@
         preload="auto" 
         autoplay 
         loop 
-        muted>
+        muted
+        playsinline>
         </video>
-        <h1 id="a" class="text">SHOWREEL</h1>
+        <h1 id="a" class="text" onclick="goToShow()">SHOWREEL</h1>
         <video 
     
         id="two"
@@ -87,9 +88,10 @@
         preload="auto" 
         autoplay 
         loop 
-        muted>
+        muted
+        playsinline>
         </video>
-        <h1 id="b" class="text">ABOUT US</h1>
+        <h1 id="b" class="text" onclick="goToAbout()">ABOUT US</h1>
         <video 
     
         id="three"
@@ -101,9 +103,10 @@
         preload="auto" 
         autoplay 
         loop 
-        muted>
+        muted
+        playsinline>
         </video>
-        <h1 id="c" class="text">PRODUCTS</h1>
+        <h1 id="c" class="text" onclick="goTo()">PRODUCTS</h1>
         <video 
     
         id="four"
@@ -115,14 +118,15 @@
         preload="auto" 
         autoplay 
         loop 
-        muted>
+        muted
+        playsinline>
         </video>
-        <h1 id="d" class="text">FUTURE <br> PRODUCTS</h1>
+        <h1 id="d" class="text" onclick="goToFuture()">FUTURE <br> PRODUCTS</h1>
   </div>
   
 
   <!-- second Screen  -->
-  <div style="width: 88%;float: left;top: 0%;position: absolute; left: 0%;">
+  <div style="width: 88%;float: left;top: 10%;position: absolute; left: 10%;">
     <iframe style="display: none;" src="" id="video" allow="autoplay" allowfullscreen></iframe>
   </div>
   <!-- PRODUCTS -->
@@ -141,7 +145,7 @@
         muted>
       </video>
     </div>
-    <span style="color:aliceblue;">Volmetric Display</span>
+    <span style="color:aliceblue;" onclick="doSomeThing('1')">Volmetric Display</span>
     <div class="animate__animated animate__backInDown" id="2" onclick="doSomeThing('2')">
       <video 
         id="sub2"
@@ -154,7 +158,7 @@
         muted>
         </video>
     </div>
-    <span style="color:aliceblue;">Interactive Wall</span>
+    <span style="color:aliceblue;" onclick="doSomeThing('2')">Interactive Wall</span>
     <div class="animate__animated animate__backInDown" id="3" onclick="doSomeThing('3')">
       <video 
         id="sub3"
@@ -167,7 +171,7 @@
         muted>
         </video>
     </div>
-    <span style="color:aliceblue;">Registration</span>
+    <span style="color:aliceblue;" onclick="doSomeThing('3')">Registration</span>
     <div class="animate__animated animate__backInDown" id="4" onclick="doSomeThing('4')">
       <video 
         id="sub4"
@@ -180,7 +184,7 @@
         muted>
         </video>
     </div>
-    <span style="color:aliceblue;">Tweet Cafe</span>
+    <span style="color:aliceblue;" onclick="doSomeThing('4')">Tweet Cafe</span>
     <div class="animate__animated animate__backInDown" id="5" onclick="doSomeThing('5')">
       <video 
         id="sub5"
@@ -193,7 +197,7 @@
         muted>
         </video>
     </div>
-    <span style="color:aliceblue;">Scanny</span>
+    <span style="color:aliceblue;" onclick="doSomeThing('5')">Scanny</span>
     <div class="animate__animated animate__backInDown" id="6" onclick="doSomeThing('6')">
       <video 
         id="sub6"
@@ -206,10 +210,8 @@
         muted>
         </video>
     </div>
-    <span style="color:aliceblue;font-size: 12px;">Floor Interactive Display</span>
+    <span style="color:aliceblue;font-size: 12px;" onclick="doSomeThing('6')">Floor Interactive Display</span>
   </section>
-
-
 <script src="/public/js/left.js"></script>
 </body>
 </html>
